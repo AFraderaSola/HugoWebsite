@@ -22,4 +22,4 @@ url_video: ""
 
 Under construction - Full details available soon
 
-Meanwhile, check the the following [github repo](https://github.com/AFraderaSola/Scerevisiae_RBPs_Interactome)
+Meanwhile, check the the following [github repository](https://github.com/AFraderaSola/Scerevisiae_RBPs_Interactome)
