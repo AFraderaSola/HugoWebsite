@@ -20,22 +20,34 @@ feature:
     icon: r-project
     icon_pack: fab
     name: R
-  - description: "Good"
-    icon: "Shiny"
-    icon_pack: "custom"
-    name: App development
+  - description: Advanced
+    icon: tidyverse
+    icon_pack: custom
+    name: Data wrangling
   - description: Good
     icon: chart-line
     icon_pack: fas
-    name: Statistics
+    name: Data analysis and statistics
+  - description: Advanced
+    icon: ggplot2
+    icon_pack: custom
+    name: Data visualization
+  - description: Advanced
+    icon: rmarkdown
+    icon_pack: custom
+    name: Data reporting
+  - description: Good
+    icon: Shiny
+    icon_pack: custom
+    name: App development
   - description: Good
     icon: code
     icon_pack: fa
     name: Bash and HPC
-  - description: "Good"
-    icon: "MQ"
-    icon_pack: "custom"
-    name: Max Quant
+  - description: Good
+    icon: MQ
+    icon_pack: custom
+    name: MaxQuant
   - description: Beginner
     icon: python
     icon_pack: fab
