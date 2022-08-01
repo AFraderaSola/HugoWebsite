@@ -52,4 +52,4 @@ title: Albert Fradera Sola
 
 I am a PhD candidate in Quantitative Proteomics in the Institute of Molecular Biology. My research interests focus on bioinformatics, specially when it comes to omics data and its statistical analysis. My work revolves around analyzing NGS-based genomics and Quantitative Mass spectrometry-based proteomics data. I consider myself both collaborative and adaptable. I am always eager to tackle new and different projects. I am very enthusiastic to always share and develop my data visualization skills as a means towards better science communication. I am an open-minded person and enjoy having great relationships with my colleagues.
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/home/20220724_cv.pdf" "newtab" >}}curriculum vitae{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/home/cv.pdf" "newtab" >}}curriculum vitae{{< /staticref >}}.
