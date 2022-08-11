@@ -2,10 +2,12 @@
 bio:
 education:
   courses:
-  - course: MSc in Omics Data Analysis
+  - course: PhD Candidate in Quantitative Proteomics
+    institution: JGU University
+  - course: M.Sc. in Omics Data Analysis
     institution: University of Vic
     year: 2017
-  - course: BSc in Biochemestry
+  - course: B.Sc. in Biochemistry
     institution: University of Barcelona
     year: 2016
 email: ""
@@ -50,6 +52,6 @@ superuser: true
 title: Albert Fradera Sola
 ---
 
-I am a PhD candidate in Quantitative Proteomics in the Institute of Molecular Biology. My research interests focus on bioinformatics, specially when it comes to omics data and its statistical analysis. My work revolves around analyzing NGS-based genomics and Quantitative Mass spectrometry-based proteomics data. I consider myself both collaborative and adaptable. I am always eager to tackle new and different projects. I am very enthusiastic to always share and develop my data visualization skills as a means towards better science communication. I am an open-minded person and enjoy having great relationships with my colleagues.
+I am a PhD candidate in Quantitative Proteomics in the Institute of Molecular Biology. My research interests focus on bioinformatics, especially omics data and its statistical analysis. My work revolves around analyzing NGS-based genomics and quantitative mass spectrometry-based proteomics data. I consider myself both collaborative and adaptable. I am always eager to tackle new and different projects. I am very enthusiastic to share and develop my data visualization skills as a means towards better science communication. I am an open-minded person and enjoy having great relationships with my colleagues.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/home/cv.pdf" "newtab" >}}curriculum vitae{{< /staticref >}}.
