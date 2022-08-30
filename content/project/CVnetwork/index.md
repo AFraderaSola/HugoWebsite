@@ -25,7 +25,7 @@ url_video: ""
 
 {{< toc >}}
 
-### **TLTR**
+### **TL;DR**
 
 The main idea behind this project is to make your **CV shine**,  by visualizing its data and plotting it in an interactive fashion you. Thus what I want to do is to connect the usual entries on a CV (education, positions, publications...) by year, so I can visualize, in an intuitive way, how a career path has developed. 
 
