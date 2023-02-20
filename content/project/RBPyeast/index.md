@@ -24,34 +24,36 @@ url_video: ""
 
 ### TL;DR
 
-This project’s goal is to identify RNA-binding proteins (RBPs) functionalities with **proteomics data and network analysis**. I used **mass-spectrometry** data to collect interaction partners for 40 RBPs with known functionalities on the mRNA life cycle. Then I constructed a network to connect all the proteins and use a **guilt-by-association principle** to assign novel functionalities. This resulted in the creation of a **Shiny app** database [https://butterlab.imb-mainz.de/RINE/](https://butterlab.imb-mainz.de/RINE/) where data can be interactively explored. 
-If you find the app interesting and you want to learn more about the data analysis behind it, continue to read. 
+This project aims to identify the functionalities of RNA-binding proteins (RBPs) through **proteomics** data and **network analysis**. **Mass-spectrometry** data was used to collect interaction partners for 40 RBPs with known functionalities in mRNA life cycle. Then, a network was constructed to connect all the proteins, and a **guilt-by-association principle** was applied to assign novel functionalities. As a result, a **Shiny app** database [https://butterlab.imb-mainz.de/RINE/](https://butterlab.imb-mainz.de/RINE/) was created for interactive data exploration. If you find the app interesting and want to learn more about the data analysis behind it, please continue reading.
 
 ### Introduction
 
-This project is the backbone of my **PhD thesis** which revolves around mass-spectrometry (MS) data, with a particular focus on RNA binding-proteins (RBPs) and their associated functionalities. In recent years, the number of detected proteins classified as RBPs has been **skyrocketing**; in yeast, for instance, there are 1,273 proteins classified as RBPs. You can check this nice review from [Hentze *et al.*](https://www.nature.com/articles/nrm.2017.130) if you are curious about this phenomenon.  Even so, and despite more and more proteins being classified as RBPs, their **functional** roles remain largely unexplored. 
-The main reason behind the lack of functional details is that newly described RBPs mostly come from **high-throughput** techniques such as  [RNA interactome capture (RIC)](https://www.nature.com/articles/s41467-018-06557-8). These techniques usually generate big data sets and **shine at identifying and classifying individuals**, but they do lack deep biological characterization. 
-The goal behind this project was to add a **first layer** of functional characterization while keeping a **high-throughput**. Thus, we selected **40 well-characterised yeast RBPs** and identified its interaction partners with immunoprecipitation coupled to MS-based quantitative proteomics. With this data we were able to build **function-based** networks to gather hints on which individuals might be involved on particular **RNA-related** pathways. 
+This project is the foundation of my **PhD thesis**, which focuses on mass-spectrometry (MS) data, specifically on RNA-binding proteins (RBPs) and their associated functionalities. In recent years, the number of proteins classified as RBPs has **skyrocketed**, with 1,273 proteins classified as RBPs in yeast alone. If you're curious about this phenomenon, you can check out this informative review by [Hentze *et al.*](https://www.nature.com/articles/nrm.2017.130) Despite the increasing number of proteins classified as RBPs, their **functional** roles remain largely unexplored.
+
+The main reason behind this lack of functional details is that newly described RBPs mostly come from **high-throughput** techniques such as [RNA interactome capture (RIC)](https://www.nature.com/articles/s41467-018-06557-8). These techniques generate large datasets and **excel at identifying and classifying individuals**, but they lack deep biological characterization. The goal of this project was to add a **first layer** of functional characterization while maintaining a **high-throughput** approach. Therefore, we selected **40 well-characterized yeast RBPs** and identified their interaction partners with immunoprecipitation coupled to MS-based quantitative proteomics. With this data, we were able to build **function-based** networks to gather hints on which individuals might be involved in particular **RNA-related** pathways.
 
 ### The Data
 
 #### Candidate RBPs
 
-I wanted to collect the interaction partners for 40 selected RBPs, which would constitute the building blocks of our function-based networks. Before focusing on the interactors data itself let’s first take a step back and look at the candidates data. Why these 40 RBPs in particular? How do they enable function-based networks? Hell, what do I even mean by “function-based networks''?
+To begin with, I aimed to gather the interaction partners of 40 chosen RBPs, which would serve as the foundation of our function-based networks. Before delving into the interactors data, let's take a step back and examine the candidates data. Why specifically these 40 RBPs? How do they facilitate the formation of function-based networks? Moreover, what precisely do I mean by "function-based networks"?
 
 {{< figure src="Picture1.png" caption="Function-based network concept" >}}
 
-Let’s start by refreshing some basic network terminology. During this post, I am gonna describe the selected RBPs as network **hubs**, their interaction partners as **nodes**, and the connections between them as **edges**.  This way, each square (Target RBP) is a hub, each circle (IP interactor) is a node, and the lines (connections) are edges. These three elements are what I eventually used to create the **RBP interactome network**. When we later take a subset of this larger network, filtering for a particular functionality, we get what we describe as **function-based networks**. For instance, if we would keep only the blue hubs, we would obtain a blue function-based network. 
-Now that I have established the network *lingua franca*, we can focus on our 40 RBP candidates. I selected them with the idea that, ultimately, they would become the hubs on the function-based networks. Thus it became paramount to select **well-studied** candidates with **central roles** on their pathways. I relied on the [KEGG](https://www.kegg.jp/) and [Reactome](https://reactome.org/) databases to query RBPs involved in **RNA biology pathways** such as degradation or splicing. Finally, our **candidates** needed to be included on the TAP tagged comercial library so I could capture them with antibodies. 
+Let’s start by refreshing some basic network terminology. In this post, I will refer to the selected RBPs as **"network hubs"**, their interaction partners as **"nodes"**, and the connections between them as **"edges"**. By using this terminology, each square representing a target RBP can be considered a hub, each circle representing an IP interactor can be considered a node, and the lines representing connections between them can be considered edges. Using these three elements, I created the **RBP interactome network**. When we later filter this larger network for a particular functionality, we obtain a **"function-based network"**. For example, if we only keep the blue hubs, we can create a blue function-based network.
+
+With our network *lingua franca* established, let's now focus on our 40 RBP candidates. These RBPs were selected based on their potential to become the hubs on the function-based networks. To ensure this, it was crucial to choose **well-studied** candidates that play **central roles** in their pathways. To identify such candidates, I consulted the [KEGG](https://www.kegg.jp/) and [Reactome](https://reactome.org/) databases, which helped me identify RBPs involved in **RNA biology pathways** such as degradation or splicing. Additionally, our **candidates** needed to be included in the TAP-tagged commercial library so that I could capture them with an antibody.
 
 #### Interactors data
 
 {{< figure src="Picture2.png" caption="Immunoprecipitation experimental design" >}}
 
-I immunoprecipitated each selected RBP and pulled down all their interactor partners, in the **presence** or **absence** of RNA. This allowed to obtain two very distinctive groups of interactors: 
-- **Protein-Protein interactors (PPI)**: Due to the RNA digestion, by RNase A, all the nodes in this group interact with our hubs in an **RNA independent** manner. 
-- **RNA-dependent interactors (RDI)**: This group contains all the nodes that interact with our hubs in an **RNA dependent** manner. 
-For both groups, the interactors were measured and quantified with a label-free quantification (LFQ) MS protocol. Together with the hub candidates, the PPI and RDI nodes are the building blocks which I used to construct the function-based networks.
+I performed immunoprecipitation on each of the selected RBPs and captured all their interacting partners in the **presence** or **absence** of RNA. This allowed me to obtain two distinct groups of interactors:
+ 
+- **Protein-Protein interactors (PPI)**: As a result of RNA digestion by RNase A, all the nodes in this group interact with our hubs in an **RNA-independent** manner. 
+- **RNA-dependent interactors (RDI)**: This group consists of all the nodes that interact with our hubs in an **RNA-dependent** manner. 
+
+Using a label-free quantification (LFQ) MS protocol, I quantified the interactors in both groups. These interactors, along with the hub candidates, served as the building blocks for constructing the function-based networks.
 
 ### Data analysis
 
@@ -116,7 +118,4 @@ Additionally I also combined the **PPI** and **RDI** groups into a **global netw
 
 ### Conclusion
 
-All these data analysis and network building are created with a particular goal in mind: **serve as a resource**. We point out which **nodes are novel** (non reported at BioGRID) and whether they are **classified as RBPs or not**. Additionally we pointed out potential functional associations with our **function-based** networks. Following the **guilt-by-association** principle, if a node is concurrently associated with other nodes and hubs that are participating, for instance, in splicing pathways you are likely involved in splicing. Thus this can be used as a starting point  for **in-depth functional characterization**. To facilitate it, I constructed a user-friendly **shiny app** [https://butterlab.imb-mainz.de/RINE/](https://butterlab.imb-mainz.de/RINE/) were all the networks can be explored. With this, I hope that data becomes **accessible** and **RNA research labs** are able to deepen the RBP research field. 
-
-
-
+The purpose of all the data analysis and network building in this project is to create a **valuable resource**. We identified which **nodes are novel**, meaning they have not been reported in the BioGRID database, and whether they are classified as RBPs or not. Additionally, we identified potential functional associations with our **function-based** networks. Following the **guilt-by-association** principle, if a node is associated with other nodes and hubs that participate in splicing pathways, for example, it is likely involved in splicing. This can serve as a starting point for **in-depth functional characterization**. To facilitate this, I developed a user-friendly **shiny app**, available at [https://butterlab.imb-mainz.de/RINE/](https://butterlab.imb-mainz.de/RINE/), where all the networks can be explored. I hope this app makes the data **accessible** and enables **RNA research labs** to deepen their understanding of the RBP research field.
