@@ -24,7 +24,7 @@ url_video: ""
 
 ### TL;DR
 
-This project’s goal is to identify RNA-binding proteins (RBPs) functionalities with **proteomics data and network analysis**. I used **mass-spectrometry** data to collect interaction partners for 40 RBPs with known functionalities on the mRNA life cycle. Then I constructed a network to connect all the proteins and use a **guilt-by-association principle** to assign novel functionalities. This resulted in the creation of a **Shiny app** database [https://butterlab.imb-mainz.de/ScRBPinteractome/](https://butterlab.imb-mainz.de/ScRBPinteractome/) where data can be interactively explored. 
+This project’s goal is to identify RNA-binding proteins (RBPs) functionalities with **proteomics data and network analysis**. I used **mass-spectrometry** data to collect interaction partners for 40 RBPs with known functionalities on the mRNA life cycle. Then I constructed a network to connect all the proteins and use a **guilt-by-association principle** to assign novel functionalities. This resulted in the creation of a **Shiny app** database [https://butterlab.imb-mainz.de/RINE/](https://butterlab.imb-mainz.de/RINE/) where data can be interactively explored. 
 If you find the app interesting and you want to learn more about the data analysis behind it, continue to read. 
 
 ### Introduction
