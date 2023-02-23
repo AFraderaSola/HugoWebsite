@@ -2,15 +2,15 @@
 date: "2022-07-20T00:00:00Z"
 external_link: ""
 image:
-  # caption: RNAseq exploratory analysis: PCA and clustered heat map.
-  focal_point: Smart
+  # caption: Jury vote function for RNAseq differential expression analysis
+  # focal_point: Smart
 # links:
 # - icon: twitter
 #   icon_pack: fab
 #   name: Follow
 #   url: https://twitter.com/afraderasola
-# slides: example
-summary: Main M.Sc project - I developed a scoring function around three R-based RNA-Seq differential expression packages (DESeq2, edgeR, limma+voom). The main goal was to assess ow well packages perform and compare the their results in order to maximize (or restric, depending on your criteria) the number of detected DEGs. 
+slides: IPPlolium
+summary: For my M.Sc project, I developed a scoring function to evaluate the performance of four widely used RNA-Seq differential expression packages (DESeq2, edgeR, limma+voom, and BaySeq). The aim was to compare and assess the results of each package and determine the optimal approach for detecting differentially expressed genes (DEGs). By developing this function, we aimed to provide researchers with a tool to maximize or restrict the number of detected DEGs based on their criteria.
 tags:
 - Genomics
 title: Scoring function development for RNA-Seq differential expression assessment
@@ -64,7 +64,7 @@ This way, this jury vote function takes into account the results from multiple p
 
 It also gives the flexibility to decide whether you want to maximize your results (taking any DEGs in any package, score of 1) or get a subset of very reliable, robust results (taking only DEGs in all packages, score of 4).
 
-### Case of study: Drought resistance in ryegrass
+### Case of study: Drought resistance in perennial ryegrass
 
 *Lolium perenne*, commonly known as perennial ryegrass, is a cool-season grass widely used in temperate regions for forage production, turfgrass, and erosion control due to its rapid establishment, high productivity, and quality. In addition, *L. perenne* has gained interest as a model species for studying abiotic stress tolerance, particularly drought resistance.
 
@@ -72,6 +72,24 @@ Drought is a major environmental stress that affects plant growth and productivi
 
 Overall, *L. perenne* is a valuable species for studying drought resistance and developing more resilient crops. Its use as a model species for abiotic stress research has the potential to improve our understanding of the molecular basis of stress tolerance and aid in the development of new crops with improved resilience.
 
+RNAseq was collected from *L. perenne* root and leaf tissue at different soil water content; 35%, considered a regular condition (no stress) and 15%, 5%, and 1%, increasing stress conditions.
+
 {{< figure src="Picture1.png" caption="Experimental conditions to determine L. perenne DEGs under drought conditions" >}}
 
-RNAseq was collected from *L. perenne* root and leaf tissue at different soil water content; 35%, considered a regular condition (no stress) and 15%, 5%, and 1%, increasing stress conditions.
+Then, I used the previously described jury vote sytem to determine the DEGs.
+
+{{< figure src="Picture2.png" caption="Number of DEGs per RNAseq package" >}}
+
+The results of the analysis showed that edgeR, DESeq2, and limma+voom had a similar performance in terms of identifying differentially expressed genes (DEGs), as evidenced by the low number of DEGs unique to each package. However, BaySeq yielded a higher number of DEGs using its own methodology.
+
+In addition to comparing the packages, we also conducted a functional analysis to investigate whether the genes associated with drought conditions were functionally related. The results of the functional analysis provided valuable insights into the mechanisms by which *L. perenne* adapts to drought conditions.
+
+{{< figure src="Picture3.png" caption="Number of DEGs per RNAseq package" >}}
+
+### Conclusion
+
+RNAseq is a powerful tool to measure gene expression levels and identify DEGs between different biological conditions, such as different tissues, cell types, developmental stages, or disease states. The RNAseq data analysis pipeline includes several steps, such as quality control, alignment, gene expression quantification, normalization, and statistical testing for differential expression analysis. Several packages and tools are available for each step, and the choice of appropriate methods is crucial for obtaining reliable and biologically meaningful results.
+
+In this study, we compared the performance of four popular DEGs analysis packages (edgeR, DESeq2, limma+voom, and BaySeq) for the identification of drought-responsive genes in the ryegrass Lolium perenne. We found that the three most widely used packages (edgeR, DESeq2, and limma+voom) performed similarly, while BaySeq identified a larger number of DEGs using its own methodology. We also conducted functional enrichment analysis to gain insights into the biological processes and pathways involved in the drought response in *L. perenne*.
+
+Overall, our study demonstrates the importance of carefully selecting appropriate methods and packages for RNAseq data analysis and highlights the potential of RNAseq technology for identifying novel genes and biomarkers related to complex biological processes such as drought adaptation.
