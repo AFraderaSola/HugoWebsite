@@ -10,7 +10,7 @@ image:
 #   name: Follow
 #   url: https://twitter.com/afraderasola
 slides: CSAMARBPyeast
-summary: Main PhD project - RNA binding proteins (RBPs) were selected according to their involvement in RNA pathways and immunoprecipitated. This allowed us to create a function-based network that enabled the assignment of new functionalities on novel and known RBPs. This work was recently presented at CSAMA 2022.
+summary: In my main PhD project, I focused on RNA binding proteins (RBPs) and their role in RNA pathways. To better understand their functions, we selected RBPs based on their known involvement in these pathways and immunoprecipitated them. Through this approach, we were able to create a function-based network that allowed us to assign new functionalities to both known and novel RBPs. Our work on this project was recently presented at CSAMA 2022.
 tags:
 - Proteomics
 title: Network-based assignment of RNA-binding protein function

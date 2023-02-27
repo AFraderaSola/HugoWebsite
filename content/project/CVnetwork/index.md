@@ -1,5 +1,5 @@
 ---
-date: "2022-07-23T00:00:00Z"
+date: "2023-02-15T00:00:00Z"
 external_link: ""
 image:
   caption: My CV as a network
