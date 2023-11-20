@@ -13,7 +13,7 @@ authors:
 - Christian J. Janzen
 date: "2022-06-08T00:00:00Z"
 doi: "https://doi.org/10.1371/journal.ppat.1010514"
-featured: True
+featured: False
 image:
   caption: 'Credit: Aldona - iStock'
   focal_point: ""

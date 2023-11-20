@@ -17,13 +17,13 @@ image:
   caption: ''
   focal_point: ""
   preview_only: false
-# projects:
-# - Lolium
+projects:
+- RBPyeast
 publication: In *Nucleic Acids Research*
 publication_short: In *Nucleic Acids Research*
 publication_types:
 - "2"
-publishDate: "2022-06-08T00:00:00Z"
+publishDate: "2023-04-18T00:00:00Z"
 # slides: example
 summary: Mass spectrometry-based proteomics data was analyzed to characterize novel interactors for RNA-binding proteins. Network and systems biology strategies revealed concurrent interaction binding patterns and novel functionalities for such proteins. 
 tags: Proteomics

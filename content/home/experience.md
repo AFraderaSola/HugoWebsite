@@ -22,11 +22,11 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: PhD candidate
-    company: Institue of Molecular Biology  - Johannes Gutenberg Universität
-    company_url: 'https://www.imb.de/research/butter/research'
+  - title: Postdoctoral researcher
+    company: Friedrich-Loeffler-Institut  - Institute of Molecular Virology and Cell Biology
+    company_url: 'https://www.fli.de/en/institutes/institute-of-molecular-virology-and-cell-biology-imvz/laboratories/laboratory-of-proteomics-and-systems-biology/'
     # company_logo: org-gc
-    location: Mainz, Germany
+    location: Greifswald, Germany
     date_start: '2023-04-01'
     date_end: ''
     description: |2-
@@ -41,7 +41,7 @@ experience:
     # company_logo: org-gc
     location: Mainz, Germany
     date_start: '2018-11-01'
-    date_end: '2023-03-1'
+    date_end: '2024-01-19'
     description: |2-
         In brief:
         * PhD candidate with Dr. Falk Butter

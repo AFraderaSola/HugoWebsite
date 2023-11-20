@@ -22,7 +22,7 @@ interests:
 organizations:
 - name: Friedrich-Loeffler-Institut
   url: https://www.fli.de/en/institutes/institute-of-molecular-virology-and-cell-biology-imvz/laboratories/laboratory-of-proteomics-and-systems-biology/
-role: PhD Candidate
+role: Postdoctoral researcher
 social:
 # - icon: envelope
 #   icon_pack: fas

@@ -25,7 +25,7 @@ content:
   #     captcha: false
 
   # Contact details (edit or remove options as required)
-  email: A.FraderaSola@imb-mainz.de
+  email: afraderasola@gmail.com
   phone: +49 179 3469988
   address:
     street: Ackermannweg 4
@@ -33,7 +33,7 @@ content:
     country: Germany
     region:
     postcode: '55128'
-    country_code: US
+    # country_code: US
   # coordinates:
   #   latitude: '37.4275'
   #   longitude: '-122.1697'
