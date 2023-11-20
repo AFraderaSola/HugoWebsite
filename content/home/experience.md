@@ -27,15 +27,26 @@ experience:
     company_url: 'https://www.imb.de/research/butter/research'
     # company_logo: org-gc
     location: Mainz, Germany
-    date_start: '2018-11-01'
+    date_start: '2023-04-01'
     date_end: ''
+    description: |2-
+        In brief:
+        * Postdoctoral researcher with Dr. Falk Butter
+        * Genomics (RNAseq, ChIPseq) and proteomics data management, analysis and integration
+        * Project 1: Developmental proteome quantification in Xenopus species
+        * Project 2: Leishmania infectome characterization 
+  - title: PhD candidate
+    company: Institue of Molecular Biology  - Johannes Gutenberg Universität
+    company_url: 'https://www.imb.de/research/butter/research'
+    # company_logo: org-gc
+    location: Mainz, Germany
+    date_start: '2018-11-01'
+    date_end: '2023-03-1'
     description: |2-
         In brief:
         * PhD candidate with Dr. Falk Butter
         * Genomics (RNAseq, ChIPseq) and proteomics data management, analysis and integration
         * Project 1: Characterization of the RNA binding proteins interactome in yeast
-        * Project 2: Developmental proteome quantification in Xenopus species
-        * Project 3: Leishmania infectome characterization 
   - title: Research assistant
     company: Institue of Molecular Biology  - Johannes Gutenberg Universität
     company_url: 'https://www.imb.de/research/butter/research'

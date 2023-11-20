@@ -4,22 +4,24 @@ education:
   courses:
   - course: PhD Candidate in Quantitative Proteomics
     institution: JGU University
+    year: 2024
   - course: M.Sc. in Omics Data Analysis
     institution: University of Vic
     year: 2017
   - course: B.Sc. in Biochemistry
     institution: University of Barcelona
     year: 2016
-email: ""
+email: "afraderasola@gmail.com"
 highlight_name: true
 interests:
 - Bioinformatics
 - Data visualization
 - Proteomics
 - Next generation sequencing
+- Network & Systems biology
 organizations:
-- name: Institute of Molecular Biology
-  url: https://www.imb.de/research/butter/research
+- name: Friedrich-Loeffler-Institut
+  url: https://www.fli.de/en/institutes/institute-of-molecular-virology-and-cell-biology-imvz/laboratories/laboratory-of-proteomics-and-systems-biology/
 role: PhD Candidate
 social:
 # - icon: envelope
@@ -52,6 +54,6 @@ superuser: true
 title: Albert Fradera Sola
 ---
 
-I am a PhD candidate in Quantitative Proteomics in the Institute of Molecular Biology. My research interests focus on bioinformatics, especially omics data and its statistical analysis. My work revolves around analyzing NGS-based genomics and quantitative mass spectrometry-based proteomics data. I consider myself both collaborative and adaptable. I am always eager to tackle new and different projects. I am very enthusiastic to share and develop my data visualization skills as a means towards better science communication. I am an open-minded person and enjoy having great relationships with my colleagues.
+I am a postdoctoral researcher in Proteomics and Systems Biology at the Institute of Molecular Virology and Cell Biology of the Friedrich-Loeffler-Institut. My research interests focus on bioinformatics, especially omics data and its statistical analysis. My work revolves around analyzing NGS-based genomics and quantitative mass spectrometry-based proteomics data. I consider myself both collaborative and adaptable. I am always eager to tackle new and different projects. I am very enthusiastic about sharing and developing my data visualization skills as a means towards better science communication. I am an open-minded person and enjoy fostering great relationships with my colleagues.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/home/cv.pdf" "newtab" >}}curriculum vitae{{< /staticref >}}.
