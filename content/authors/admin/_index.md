@@ -33,9 +33,9 @@ social:
 - icon: orcid
   icon_pack: fab
   link: https://orcid.org/0000-0002-4780-9312
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/AFraderaSola
+# - icon: twitter
+#   icon_pack: fab
+#   link: https://twitter.com/AFraderaSola
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?view_op=list_works&hl=en&user=S0Hv4nUAAAAJ&gmla=AJsN-F7dv2Hh8UVQkxzPARPrR0TmHbHUFnlDDTqu3XSoAs8pjvmln4KlGq0KmOqv-nh01QC5a-8fNgQI76bZqElaMr7oE4mDr_Mp4NUpaGQI_jakncCYIJPGM_KYNo1mOhdEP0FuJc3Y
@@ -45,11 +45,9 @@ social:
 # - icon: stack-overflow
 #   icon_pack: fab
 #   link: https://stackoverflow.com/users/9634765/a-fraderasola
-
-  
-# - icon: linkedin
-#   icon_pack: fab
-#   link: https://www.linkedin.com/
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/albert-fradera-sola-500913339/
 superuser: true
 title: Albert Fradera Sola
 ---
