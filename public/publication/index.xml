@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications | Albert Fradera Sola</title>
+    <link>https://AFraderaSola.github.io/publication/</link>
+      <atom:link href="https://AFraderaSola.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://AFraderaSola.github.io/media/icon_huf5ee247ce1e31b4a1480ddc7a50ce984_103999_512x512_fill_lanczos_center_3.png</url>
+      <title>Publications</title>
+      <link>https://AFraderaSola.github.io/publication/</link>
+    </image>
+    
+    <item>
+      <title>ZNF524 directly interacts with telomeric DNA and supports telomere integrity</title>
+      <link>https://AFraderaSola.github.io/publication/2023_hannacollab/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://AFraderaSola.github.io/publication/2023_hannacollab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Characterization of two novel proteins involved in mitochondrial DNA anchoring in Trypanosoma brucei</title>
+      <link>https://AFraderaSola.github.io/publication/2023_simonacollabbis/</link>
+      <pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://AFraderaSola.github.io/publication/2023_simonacollabbis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DNA damage repair proteins across the Tree of Life</title>
+      <link>https://AFraderaSola.github.io/publication/2023_ddp/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://AFraderaSola.github.io/publication/2023_ddp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RNA-dependent interactome allows network-based assignment of RNA-binding protein function</title>
+      <link>https://AFraderaSola.github.io/publication/2023_rbp/</link>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://AFraderaSola.github.io/publication/2023_rbp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A novel SNF2 ATPase complex in Trypanosoma brucei with a role in H2A.Z-mediated chromatin remodeling</title>
+      <link>https://AFraderaSola.github.io/publication/2022_chiptryp/</link>
+      <pubDate>Wed, 08 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://AFraderaSola.github.io/publication/2022_chiptryp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The double-stranded DNA-binding proteins TEBP-1 and TEBP-2 form a telomeric complex with POT-1</title>
+      <link>https://AFraderaSola.github.io/publication/2021_rnaseqcele/</link>
+      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://AFraderaSola.github.io/publication/2021_rnaseqcele/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A comparison of shared patterns of differential gene expression and gene ontologies in response to water-stress in roots and leaves of four diverse genotypes of Lolium and Festuca spp. temperate pasture grasses</title>
+      <link>https://AFraderaSola.github.io/publication/2021_lolium/</link>
+      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://AFraderaSola.github.io/publication/2021_lolium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Characterization of the novel mitochondrial genome segregation factor TAP110 in Trypanosoma brucei</title>
+      <link>https://AFraderaSola.github.io/publication/2021_simonacollab/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://AFraderaSola.github.io/publication/2021_simonacollab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PAR-TERRA is the main contributor to telomeric repeat-containing RNA transcripts in normal and cancer mouse cells</title>
+      <link>https://AFraderaSola.github.io/publication/2020_terra/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://AFraderaSola.github.io/publication/2020_terra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Differential gene expression and gene ontologies associated with increasing water-stress in leaf and root transcriptomes of perennial ryegrass (Lolium perenne)</title>
+      <link>https://AFraderaSola.github.io/publication/2019_lolium/</link>
+      <pubDate>Tue, 30 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://AFraderaSola.github.io/publication/2019_lolium/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

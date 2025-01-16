@@ -1,0 +1,1812 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Albert Fradera Sola" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="In my main PhD project, I focused on RNA binding proteins (RBPs) and their role in RNA pathways. To better understand their functions, we selected RBPs based on their known involvement in these pathways and immunoprecipitated them. Through this approach, we were able to create a function-based network that allowed us to assign new functionalities to both known and novel RBPs. Our work on this project was recently presented at CSAMA 2022." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://AFraderaSola.github.io/project/rbpyeast/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.8e7a3e417d2712eeb7a4af85cc03c674.css" />
+
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-239326347-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-239326347-1', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_huf5ee247ce1e31b4a1480ddc7a50ce984_103999_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huf5ee247ce1e31b4a1480ddc7a50ce984_103999_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://AFraderaSola.github.io/project/rbpyeast/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+    <meta property="twitter:site" content="@wowchemy" />
+    <meta property="twitter:creator" content="@wowchemy" />
+  
+  <meta property="og:site_name" content="Albert Fradera Sola" />
+  <meta property="og:url" content="https://AFraderaSola.github.io/project/rbpyeast/" />
+  <meta property="og:title" content="Network-based assignment of RNA-binding protein function | Albert Fradera Sola" />
+  <meta property="og:description" content="In my main PhD project, I focused on RNA binding proteins (RBPs) and their role in RNA pathways. To better understand their functions, we selected RBPs based on their known involvement in these pathways and immunoprecipitated them. Through this approach, we were able to create a function-based network that allowed us to assign new functionalities to both known and novel RBPs. Our work on this project was recently presented at CSAMA 2022." /><meta property="og:image" content="https://AFraderaSola.github.io/project/rbpyeast/featured.jpg" />
+    <meta property="twitter:image" content="https://AFraderaSola.github.io/project/rbpyeast/featured.jpg" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2022-08-31T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2022-08-31T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://AFraderaSola.github.io/project/rbpyeast/"
+  },
+  "headline": "Network-based assignment of RNA-binding protein function",
+  
+  "image": [
+    "https://AFraderaSola.github.io/project/rbpyeast/featured.jpg"
+  ],
+  
+  "datePublished": "2022-08-31T00:00:00Z",
+  "dateModified": "2022-08-31T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Albert Fradera Sola"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Albert Fradera Sola",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://AFraderaSola.github.io/media/icon_huf5ee247ce1e31b4a1480ddc7a50ce984_103999_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "In my main PhD project, I focused on RNA binding proteins (RBPs) and their role in RNA pathways. To better understand their functions, we selected RBPs based on their known involvement in these pathways and immunoprecipitated them. Through this approach, we were able to create a function-based network that allowed us to assign new functionalities to both known and novel RBPs. Our work on this project was recently presented at CSAMA 2022."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Network-based assignment of RNA-binding protein function | Albert Fradera Sola</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="2312cfee327ea8a0bf5d092776e74142" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.2ed908358299dd7ab553faae685c746c.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Albert Fradera Sola</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Albert Fradera Sola</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#featured"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Network-based assignment of RNA-binding protein function</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Aug 31, 2022
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <a class="btn btn-outline-primary btn-page-header" href="/slides/csamarbpyeast/" target="_blank">
+    Slides
+  </a>
+  
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 476px; max-height: 538px;">
+  <div style="position: relative">
+    <img src="/project/rbpyeast/featured_hu0ba4bf4fef4089fbc45422b5b5e7db63_64367_720x2500_fit_q75_h2_lanczos.webp" width="476" height="538" alt="" class="featured-image">
+    <span class="article-header-caption">Function-based assignment of RBP functionalities.</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <details class="toc-inpage d-print-none  " open>
+  <summary class="font-weight-bold">Table of Contents</summary>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#tldr">TL;DR</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#the-data">The Data</a></li>
+        <li><a href="#data-analysis">Data analysis</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</details>
+
+<h3 id="tldr">TL;DR</h3>
+<p>This project aims to identify the functionalities of RNA-binding proteins (RBPs) through <strong>proteomics</strong> data and <strong>network analysis</strong>. <strong>Mass-spectrometry</strong> data was used to collect interaction partners for 40 RBPs with known functionalities in mRNA life cycle. Then, a network was constructed to connect all the proteins, and a <strong>guilt-by-association principle</strong> was applied to assign novel functionalities. As a result, a <strong>Shiny app</strong> database <a href="https://butterlab.imb-mainz.de/RINE/" target="_blank" rel="noopener">https://butterlab.imb-mainz.de/RINE/</a> was created for interactive data exploration. If you find the app interesting and want to learn more about the data analysis behind it, please continue reading.</p>
+<h3 id="introduction">Introduction</h3>
+<p>This project is the foundation of my <strong>PhD thesis</strong>, which focuses on mass-spectrometry (MS) data, specifically on RNA-binding proteins (RBPs) and their associated functionalities. In recent years, the number of proteins classified as RBPs has <strong>skyrocketed</strong>, with 1,273 proteins classified as RBPs in yeast alone. If you&rsquo;re curious about this phenomenon, you can check out this informative review by <a href="https://www.nature.com/articles/nrm.2017.130" target="_blank" rel="noopener">Hentze <em>et al.</em></a> Despite the increasing number of proteins classified as RBPs, their <strong>functional</strong> roles remain largely unexplored.</p>
+<p>The main reason behind this lack of functional details is that newly described RBPs mostly come from <strong>high-throughput</strong> techniques such as <a href="https://www.nature.com/articles/s41467-018-06557-8" target="_blank" rel="noopener">RNA interactome capture (RIC)</a>. These techniques generate large datasets and <strong>excel at identifying and classifying individuals</strong>, but they lack deep biological characterization. The goal of this project was to add a <strong>first layer</strong> of functional characterization while maintaining a <strong>high-throughput</strong> approach. Therefore, we selected <strong>40 well-characterized yeast RBPs</strong> and identified their interaction partners with immunoprecipitation coupled to MS-based quantitative proteomics. With this data, we were able to build <strong>function-based</strong> networks to gather hints on which individuals might be involved in particular <strong>RNA-related</strong> pathways.</p>
+<h3 id="the-data">The Data</h3>
+<h4 id="candidate-rbps">Candidate RBPs</h4>
+<p>To begin with, I aimed to gather the interaction partners of 40 chosen RBPs, which would serve as the foundation of our function-based networks. Before delving into the interactors data, let&rsquo;s take a step back and examine the candidates data. Why specifically these 40 RBPs? How do they facilitate the formation of function-based networks? Moreover, what precisely do I mean by &ldquo;function-based networks&rdquo;?</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-function-based-network-concept">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Function-based network concept" srcset="
+               /project/rbpyeast/Picture1_hu8ee9ec9a5ef309c7308b75c89c87d1ac_68090_0a753119a3e26e3c5c5508ea97850a92.webp 400w,
+               /project/rbpyeast/Picture1_hu8ee9ec9a5ef309c7308b75c89c87d1ac_68090_cd4ecb239fa87a8f83cc8220a0cb94ad.webp 760w,
+               /project/rbpyeast/Picture1_hu8ee9ec9a5ef309c7308b75c89c87d1ac_68090_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/project/rbpyeast/Picture1_hu8ee9ec9a5ef309c7308b75c89c87d1ac_68090_0a753119a3e26e3c5c5508ea97850a92.webp"
+               width="760"
+               height="490"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Function-based network concept
+    </figcaption></figure>
+<p>Let’s start by refreshing some basic network terminology. In this post, I will refer to the selected RBPs as <strong>&ldquo;network hubs&rdquo;</strong>, their interaction partners as <strong>&ldquo;nodes&rdquo;</strong>, and the connections between them as <strong>&ldquo;edges&rdquo;</strong>. By using this terminology, each square representing a target RBP can be considered a hub, each circle representing an IP interactor can be considered a node, and the lines representing connections between them can be considered edges. Using these three elements, I created the <strong>RBP interactome network</strong>. When we later filter this larger network for a particular functionality, we obtain a <strong>&ldquo;function-based network&rdquo;</strong>. For example, if we only keep the blue hubs, we can create a blue function-based network.</p>
+<p>With our network <em>lingua franca</em> established, let&rsquo;s now focus on our 40 RBP candidates. These RBPs were selected based on their potential to become the hubs on the function-based networks. To ensure this, it was crucial to choose <strong>well-studied</strong> candidates that play <strong>central roles</strong> in their pathways. To identify such candidates, I consulted the <a href="https://www.kegg.jp/" target="_blank" rel="noopener">KEGG</a> and <a href="https://reactome.org/" target="_blank" rel="noopener">Reactome</a> databases, which helped me identify RBPs involved in <strong>RNA biology pathways</strong> such as degradation or splicing. Additionally, our <strong>candidates</strong> needed to be included in the TAP-tagged commercial library so that I could capture them with an antibody.</p>
+<h4 id="interactors-data">Interactors data</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-immunoprecipitation-experimental-design">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Immunoprecipitation experimental design" srcset="
+               /project/rbpyeast/Picture2_hu35c416225f13a2100881285b01a6a7bd_1282386_475b0fd5792c112fb369307a707e494e.webp 400w,
+               /project/rbpyeast/Picture2_hu35c416225f13a2100881285b01a6a7bd_1282386_ec40b92233724084d9c1d0c570b00b65.webp 760w,
+               /project/rbpyeast/Picture2_hu35c416225f13a2100881285b01a6a7bd_1282386_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/project/rbpyeast/Picture2_hu35c416225f13a2100881285b01a6a7bd_1282386_475b0fd5792c112fb369307a707e494e.webp"
+               width="376"
+               height="760"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Immunoprecipitation experimental design
+    </figcaption></figure>
+<p>I performed immunoprecipitation on each of the selected RBPs and captured all their interacting partners in the <strong>presence</strong> or <strong>absence</strong> of RNA. This allowed me to obtain two distinct groups of interactors:</p>
+<ul>
+<li><strong>Protein-Protein interactors (PPI)</strong>: As a result of RNA digestion by RNase A, all the nodes in this group interact with our hubs in an <strong>RNA-independent</strong> manner.</li>
+<li><strong>RNA-dependent interactors (RDI)</strong>: This group consists of all the nodes that interact with our hubs in an <strong>RNA-dependent</strong> manner.</li>
+</ul>
+<p>Using a label-free quantification (LFQ) MS protocol, I quantified the interactors in both groups. These interactors, along with the hub candidates, served as the building blocks for constructing the function-based networks.</p>
+<h3 id="data-analysis">Data analysis</h3>
+<p>I have not included any code on this post but, If you get curious and want to check it, you can find it available at the following github repository <a href="https://github.com/AFraderaSola/Scerevisiae_RBPs_Interactome" target="_blank" rel="noopener">github repository</a>. I will reference which subfolders belong to each analysis on their corresponding subsection.</p>
+<h4 id="rbp-interactors-quantification">RBP interactors quantification</h4>
+<p>The code for this analysis can be found in the following <a href="https://github.com/AFraderaSola/Scerevisiae_RBPs_Interactome/tree/main/01_IPscreen/YAFXXX/LFQ/01_CoreAnalysis" target="_blank" rel="noopener">github repository subfolder</a>. During this section, I am gonna assume you know some basic MS concepts; otherwise you can check this nice review from <a href="https://portlandpress.com/biochemist/article/42/5/64/226371/A-beginner-s-guide-to-mass-spectrometry-based" target="_blank" rel="noopener">Sinha <em>et al.</em></a> to freshen them up.</p>
+<p>After the immunoprecipitation experiments, I obtained, in quadruplicate, protein elution products for three conditions:</p>
+<ul>
+<li><strong>Wild type (WT)</strong></li>
+<li><strong>TAP-tagged IP RNase treated (RNase)</strong></li>
+<li><strong>TAP-tagged IP untreated (IP)</strong>
+These are ready for MS measurement; as mentioned before, I choose a LFQ protocol. Long story short, this means we can directly use our digested peptides without adding any chemical or metabolic labelling. This way, for each of our selected 40 candidates I would <strong>quantify</strong> their RNase and IP <strong>interactors</strong> so I could compare them to each other and against a WT. 
+The first step in the quantification is to match the MS peptide spectra with protein groups; for this purpose, I use the andromeda search engine as incorporated in <a href="https://www.maxquant.org/" target="_blank" rel="noopener">MaxQuant</a>. This allows for protein quantification, based on the peptide intensity. I will not go into further details on how LFQ works, you can chek this review from <a href="https://www.sciencedirect.com/science/article/pii/S1535947620333107?via%3Dihub" target="_blank" rel="noopener">Cox <em>et al.</em></a> if you want to learn more.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-protein-filtering-steps">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Protein filtering steps" srcset="
+               /project/rbpyeast/Picture3_huc656d23deb9cb997dc9569e5e7f0f90e_126243_45dc9703139a4acdafd40426672968b0.webp 400w,
+               /project/rbpyeast/Picture3_huc656d23deb9cb997dc9569e5e7f0f90e_126243_b6d5a706435068ca0b5717b11ff500f4.webp 760w,
+               /project/rbpyeast/Picture3_huc656d23deb9cb997dc9569e5e7f0f90e_126243_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/project/rbpyeast/Picture3_huc656d23deb9cb997dc9569e5e7f0f90e_126243_45dc9703139a4acdafd40426672968b0.webp"
+               width="760"
+               height="634"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Protein filtering steps
+    </figcaption></figure>
+<p>With our proteins identified we proceed with a series of quality control filtering steps; mainly we filter out the following protein groups:</p>
+<ul>
+<li><strong>Known contaminants</strong>, present on any MS experiment (i. e., keratin), as provided by the <a href="http://www.coxdocs.org/doku.php?id=maxquant:start_downloads.htm" target="_blank" rel="noopener">Cox lab</a></li>
+<li><strong>Reverse peptides</strong></li>
+<li>Filter peptides by <strong>razor</strong> and <strong>unique peptide number</strong>. This way, I only keep protein with a minimum of razor+unique peptide count higher than 2 and a minimum of unique peptide count higher than 1.</li>
+<li>Filter out by <strong>quantification event</strong>. This way, I decide to keep only proteins with a minimum of 2 quantification events along the replicates. Thus, any protein without an intensity value associated (not NA) in, at least, two out of four replicates will be filtered out.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-lfq-intesities-distribution-original-vs-imputed-values">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="LFQ intesities distribution: original vs. imputed values" srcset="
+               /project/rbpyeast/Picture4_hu7bc3ce988d6af66fb46b53d9dd37ab2f_361805_6619785180c22aebccb609ef685349dd.webp 400w,
+               /project/rbpyeast/Picture4_hu7bc3ce988d6af66fb46b53d9dd37ab2f_361805_975cb2321a148900f1262d488c550f6c.webp 760w,
+               /project/rbpyeast/Picture4_hu7bc3ce988d6af66fb46b53d9dd37ab2f_361805_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/project/rbpyeast/Picture4_hu7bc3ce988d6af66fb46b53d9dd37ab2f_361805_6619785180c22aebccb609ef685349dd.webp"
+               width="538"
+               height="760"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      LFQ intesities distribution: original vs. imputed values
+    </figcaption></figure>
+<p>Next step is dealing with the <strong>missing values</strong>. A known issue of MS experiments is the <strong>abundance of NA values</strong> along the detected protein groups due to technical limitations. For instance, a protein group could be identified with an average intensity of 25 in three replicates and have an NA value on the fourth. Our approach for these NA values is to assume that the protein was <strong>not detected due to technical limitations</strong> not because it was not present in the protein mixture. This way, we decide to impute an intensity value for all NA values still present <strong>after the filtering steps</strong>. We do so by shifting a <strong>beta distribution</strong> obtained from the LFQ intensity values to the <strong>limit of quantitation</strong>. This way, the resulting imputed values will always be random values constricted to the lowest end of our LFQ intensities. This is just one approach among many; if you are interested in further reading regarding MS data imputation, I would suggest this article from <a href="https://www.nature.com/articles/s41598-017-19120-0" target="_blank" rel="noopener">Wei <em>et al.</em></a>. 
+With our NA values imputed, we are ready to proceed with a series of quality control and exploratory analysis checks. These are pretty standard on any omics analysis (i. e., clustering by pearson correlation coefficient and dimensionality reduction by PCA) so I will not cover them in this post.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-volcano-plots-ppi-comparison-left-and-rdi-comparison-right">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Volcano plots: PPI comparison (left) and RDI comparison (right)" srcset="
+               /project/rbpyeast/Picture5_huf8d1ec54b25971814006d6b6d672e619_191991_7272f843651625d72bedc5984d8df809.webp 400w,
+               /project/rbpyeast/Picture5_huf8d1ec54b25971814006d6b6d672e619_191991_45111dc1c6ec859c79292767510f3db9.webp 760w,
+               /project/rbpyeast/Picture5_huf8d1ec54b25971814006d6b6d672e619_191991_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/project/rbpyeast/Picture5_huf8d1ec54b25971814006d6b6d672e619_191991_7272f843651625d72bedc5984d8df809.webp"
+               width="760"
+               height="236"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Volcano plots: PPI comparison (left) and RDI comparison (right)
+    </figcaption></figure>
+<p>This leads to our final step, where we assess quantified interactors differences among our three conditions. We do so with a standard <a href="https://en.wikipedia.org/wiki/Student%27s_t-test" target="_blank" rel="noopener">t-test</a>. The results are <strong>visualised as a volcano plot</strong>, which offers an intuitive way to identify enriched interactors and <strong>benchmark the experiment quality</strong> by observing the RBP-TAP and RNase behaviour. As described before, we are interested in obtaining to groups of interactors, as shown for PAB1 in the example volcano plots:</p>
+<ul>
+<li><strong>PPI</strong>, resulting from the comparison of a treated TAP-tagged RBP (RNase) to a wildt type (WT). In this comparison, the <strong>RBP-TAP targeted</strong> during the immunoprecipitation gets <strong>clearly enriched</strong> as it is not pulled down on the WT condition. On the other hand, the RNase enzyme falls on the <strong>background</strong> due to its presence in both conditions. All RBP-TAP <strong>RNA independent interactors</strong> get enriched in this comparison.</li>
+<li><strong>RDI</strong>, resulting from the comparison of an untreated TAP-tagged RBP (IP) to a treated TAP-tagged RBP (RNase). In this comparison, the <strong>RBP-TAP targeted</strong> during the immunoprecipitation falls on the <strong>background</strong> as it is equally pulled down in both conditions. On the other hand, the RNase enzyme gets <strong>negatively enriched</strong> as it is only present in the treated condition (RNase).  All RBP-TAP <strong>RNA dependent interactors</strong> get enriched in this comparison.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-bar-plot-ppi-green-rdi-orange-and-ovelap-purple-groups">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Bar plot: PPI (green), RDI (orange) and ovelap (purple) groups" srcset="
+               /project/rbpyeast/Picture6_hu66ab9d9071761b41732509a968470b32_88437_8ee5a9fec67d54fd4fb49f902ffe86e4.webp 400w,
+               /project/rbpyeast/Picture6_hu66ab9d9071761b41732509a968470b32_88437_ebb547a0b488df0da5ed0ba66c72ae43.webp 760w,
+               /project/rbpyeast/Picture6_hu66ab9d9071761b41732509a968470b32_88437_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/project/rbpyeast/Picture6_hu66ab9d9071761b41732509a968470b32_88437_8ee5a9fec67d54fd4fb49f902ffe86e4.webp"
+               width="760"
+               height="242"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Bar plot: PPI (green), RDI (orange) and ovelap (purple) groups
+    </figcaption></figure>
+<p>This way, we repeated this setup for all our 40 RBPs and we obtained two <strong>clearly different</strong> groups (minimal overlap, <strong>in purple</strong> on the barplot image) corresponding to the <strong>PPI</strong> and <strong>RDI</strong>.</p>
+<h4 id="functional-analysis">Functional Analysis</h4>
+<p>The code for this analysis can be found in the following <a href="https://github.com/AFraderaSola/Scerevisiae_RBPs_Interactome/tree/main/01_IPscreen/YAFXXX/LFQ/02_FunctionalAnalysis" target="_blank" rel="noopener">github repository subfolder</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-functional-enrichment-heat-map">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Functional enrichment heat map" srcset="
+               /project/rbpyeast/Picture7_hu3bd87f2f219f2af0a026a5f839249d06_924270_deeab307e6fd330f9b80633ed793512c.webp 400w,
+               /project/rbpyeast/Picture7_hu3bd87f2f219f2af0a026a5f839249d06_924270_dac0222aa778702d00c03cf4197727da.webp 760w,
+               /project/rbpyeast/Picture7_hu3bd87f2f219f2af0a026a5f839249d06_924270_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/project/rbpyeast/Picture7_hu3bd87f2f219f2af0a026a5f839249d06_924270_deeab307e6fd330f9b80633ed793512c.webp"
+               width="760"
+               height="386"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Functional enrichment heat map
+    </figcaption></figure>
+<p>After the (long) quantification section, I described how our network <strong>hubs</strong> (target tagged RBPs) and <strong>nodes</strong> (<strong>PPI</strong> and <strong>RDI</strong> groups) were obtained. At this point I would be ready to build the interactome network, as the <strong>edges</strong> just connect the nodes to the hubs when they were quantified on their respective experiments. I indeed have all the elements to build a <em>basic</em> interactome network, but I am interested in building a <em>function-based</em> network. Thus I need to classify the hubs by <strong>function</strong> in order to do so. I already selected them following functional criteria and one could argue this would be already enough. But I want to take it a step further and see if not just the <em>hubs</em> have associated functions but also their associated <em>nodes</em>. Thus, I choose to perform a functional enrichment analysis for each hub associated nodes. Again, this is a standard analysis included on many omics workflows so I will not cover it deeply. Long story short, I performed an <strong>over-representation analysis</strong> as implemented in the <a href="https://yulab-smu.top/biomedical-knowledge-mining-book/enrichment-overview.html" target="_blank" rel="noopener">ClusterProfiler R package</a> which, in brief, calculates p-values by hypergeometric distribution from a experimentally derived list of enriched IDs (PPI or RDI groups) and its background (Quantified proteins). This way we obtained the PPI and RDI associated <a href="https://www.kegg.jp/" target="_blank" rel="noopener">KEGG</a> pathways for each hub, if any.</p>
+<h4 id="network-analysis">Network Analysis</h4>
+<p>Now comes the fun part; I do have all the <strong>elements</strong> to construct a network (hubs, nodes and edges) and a <strong>data-driven functional classification</strong> criteria. Thus I can proceed to build the networks, with the R <a href="https://igraph.org/r/" target="_blank" rel="noopener">igraph</a>  <strong>nicely algorithm</strong> implementation. For the <strong>PPI</strong> and <strong>RDI</strong> data, I decided to create two different kind of networks:</p>
+<ul>
+<li>A <strong>global network</strong>, containing all 40 hubs. In such networks, hubs and their edges would be colour highlighted when they had a <strong>unique associated function</strong>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-global-network-ppi-left-and-rdi-right-groups-as-a-network">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Global network: PPI (left) and RDI (right) groups as a network" srcset="
+               /project/rbpyeast/Picture8_huff5e56031cfadb1e54d6aa6589d7e937_17314743_33c0fb1f675b29c9c668b65a418ea9cb.webp 400w,
+               /project/rbpyeast/Picture8_huff5e56031cfadb1e54d6aa6589d7e937_17314743_22435ff4dbecfe76ddea97c9bad48a6d.webp 760w,
+               /project/rbpyeast/Picture8_huff5e56031cfadb1e54d6aa6589d7e937_17314743_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/project/rbpyeast/Picture8_huff5e56031cfadb1e54d6aa6589d7e937_17314743_33c0fb1f675b29c9c668b65a418ea9cb.webp"
+               width="760"
+               height="760"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Global network: PPI (left) and RDI (right) groups as a network
+    </figcaption></figure>
+<ul>
+<li>A <strong>function-based subnetwork</strong>, containing all hubs associated with a particular subnetwork. For these networks I also colour highlighted the nodes, so they would show whether they have been reported before or not on the <strong>BioGRID database</strong> and whether they have been <strong>classified as RBPs</strong> or not.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-function-based--subnetwork-ppi-left-and-rdi-right-groups-as-a-network">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Function-based  subnetwork: PPI (left) and RDI (right) groups as a network" srcset="
+               /project/rbpyeast/Picture9_hu9e0a498f5e9e1145609a8ce9ab0ad3f0_2484197_e99ac544aef76d062a052844189adccd.webp 400w,
+               /project/rbpyeast/Picture9_hu9e0a498f5e9e1145609a8ce9ab0ad3f0_2484197_c2f76facfca31f2200f9e645bd5a45ab.webp 760w,
+               /project/rbpyeast/Picture9_hu9e0a498f5e9e1145609a8ce9ab0ad3f0_2484197_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/project/rbpyeast/Picture9_hu9e0a498f5e9e1145609a8ce9ab0ad3f0_2484197_e99ac544aef76d062a052844189adccd.webp"
+               width="760"
+               height="541"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Function-based  subnetwork: PPI (left) and RDI (right) groups as a network
+    </figcaption></figure>
+<p>Additionally I also combined the <strong>PPI</strong> and <strong>RDI</strong> groups into a <strong>global network</strong> and <strong>function-based subnetwork</strong>. For these networks, instead of highlighting the hubs or the nodes I choose <strong>to highlight the edges</strong> to show their group association (PPI, RDI or overlap).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-global-and-function-based-networks-ppi-and-rdi-groups-combined-as-a-network">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Global and Function-based networks: PPI and RDI groups combined as a network" srcset="
+               /project/rbpyeast/Picture10_hu80227aec0603cc357c2b9080a880b415_20395151_6af69348b5d7f5afe4f926ebd981414a.webp 400w,
+               /project/rbpyeast/Picture10_hu80227aec0603cc357c2b9080a880b415_20395151_863a04e8a5a92710c20f013c742801c4.webp 760w,
+               /project/rbpyeast/Picture10_hu80227aec0603cc357c2b9080a880b415_20395151_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/project/rbpyeast/Picture10_hu80227aec0603cc357c2b9080a880b415_20395151_6af69348b5d7f5afe4f926ebd981414a.webp"
+               width="633"
+               height="760"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Global and Function-based networks: PPI and RDI groups combined as a network
+    </figcaption></figure>
+<h3 id="conclusion">Conclusion</h3>
+<p>The purpose of all the data analysis and network building in this project is to create a <strong>valuable resource</strong>. We identified which <strong>nodes are novel</strong>, meaning they have not been reported in the BioGRID database, and whether they are classified as RBPs or not. Additionally, we identified potential functional associations with our <strong>function-based</strong> networks. Following the <strong>guilt-by-association</strong> principle, if a node is associated with other nodes and hubs that participate in splicing pathways, for example, it is likely involved in splicing. This can serve as a starting point for <strong>in-depth functional characterization</strong>. To facilitate this, I developed a user-friendly <strong>shiny app</strong>, available at <a href="https://butterlab.imb-mainz.de/RINE/" target="_blank" rel="noopener">https://butterlab.imb-mainz.de/RINE/</a>, where all the networks can be explored. I hope this app makes the data <strong>accessible</strong> and enables <strong>RNA research labs</strong> to deepen their understanding of the RBP research field.</p>
+
+    </div>
+
+    
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/proteomics/">Proteomics</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://AFraderaSola.github.io/project/rbpyeast/&amp;text=Network-based%20assignment%20of%20RNA-binding%20protein%20function" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://AFraderaSola.github.io/project/rbpyeast/&amp;t=Network-based%20assignment%20of%20RNA-binding%20protein%20function" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Network-based%20assignment%20of%20RNA-binding%20protein%20function&amp;body=https://AFraderaSola.github.io/project/rbpyeast/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://AFraderaSola.github.io/project/rbpyeast/&amp;title=Network-based%20assignment%20of%20RNA-binding%20protein%20function" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Network-based%20assignment%20of%20RNA-binding%20protein%20function%20https://AFraderaSola.github.io/project/rbpyeast/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://AFraderaSola.github.io/project/rbpyeast/&amp;title=Network-based%20assignment%20of%20RNA-binding%20protein%20function" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://AFraderaSola.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu0944afece849f504d2db773bda527492_1816731_270x270_fill_q75_lanczos_center.jpg" alt="Albert Fradera Sola"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://AFraderaSola.github.io/">Albert Fradera Sola</a></h5>
+      <h6 class="card-subtitle">Postdoctoral researcher</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/AFraderaSola" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://orcid.org/0000-0002-4780-9312" target="_blank" rel="noopener">
+        <i class="fab fa-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?view_op=list_works&amp;hl=en&amp;user=S0Hv4nUAAAAJ&amp;gmla=AJsN-F7dv2Hh8UVQkxzPARPrR0TmHbHUFnlDDTqu3XSoAs8pjvmln4KlGq0KmOqv-nh01QC5a-8fNgQI76bZqElaMr7oE4mDr_Mp4NUpaGQI_jakncCYIJPGM_KYNo1mOhdEP0FuJc3Y" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/albert-fradera-sola-500913339/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+        <h2>Publications</h2>
+        
+          
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/publication/2023_rbp/" >RNA-dependent interactome allows network-based assignment of RNA-binding protein function</a>
+    </div>
+
+    
+    <a href="/publication/2023_rbp/"  class="summary-link">
+      <div class="article-style">
+        Mass spectrometry-based proteomics data was analyzed to characterize novel interactors for RNA-binding proteins. Network and systems biology strategies revealed concurrent interaction binding patterns and novel functionalities for such proteins.
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  <span class="author-highlighted">
+      Albert Fradera Sola</span>, <span >
+      Emily Nischwitz</span>, <span >
+      Marie Elisabeth Bayer</span>, <span >
+      Susanne Kramer</span>, <span >
+      Katja Luck</span>, <span >
+      Falk Butter</span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="/publication/2023_rbp/2023_RBP.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/2023_rbp/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+  
+  <a class="btn btn-outline-primary btn-page-header btn-sm" href="/project/rbpyeast/">
+    Project
+  </a>
+  
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/https://doi.org/10.1093/nar/gkad245" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+    
+    <a href="/publication/2023_rbp/" >
+      <img src="/publication/2023_rbp/featured_hua440a90f6e58cbaed992acf80df39c52_913370_150x0_resize_q75_h2_lanczos.webp" height="100" width="150"
+           alt="RNA-dependent interactome allows network-based assignment of RNA-binding protein function" loading="lazy">
+    </a>
+    
+  </div>
+</div>
+
+        
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+    
+  </p>
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    © 2025 Me. This work is licensed under <!-- raw HTML omitted -->CC BY NC ND 4.0<!-- raw HTML omitted -->
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <!-- raw HTML omitted -->Wowchemy<!-- raw HTML omitted --> — the free, <!-- raw HTML omitted -->open source<!-- raw HTML omitted --> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.46271ef31da3f018e9cd1b59300aa265.js"></script>
+
+    
+    
+    
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+    
+    
+      <script src="/js/wowchemy-headroom.c251366b4128fd5e6b046d4c97a62a51.js" type="module"></script>
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.3239609ca7abe02ed52d76ffcb22af1d.js"></script>
+
+    
+    
+    
+    
+    
+    
+      
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Genomics | Albert Fradera Sola</title>
+    <link>https://AFraderaSola.github.io/tag/genomics/</link>
+      <atom:link href="https://AFraderaSola.github.io/tag/genomics/index.xml" rel="self" type="application/rss+xml" />
+    <description>Genomics</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://AFraderaSola.github.io/media/icon_huf5ee247ce1e31b4a1480ddc7a50ce984_103999_512x512_fill_lanczos_center_3.png</url>
+      <title>Genomics</title>
+      <link>https://AFraderaSola.github.io/tag/genomics/</link>
+    </image>
+    
+    <item>
+      <title>ZNF524 directly interacts with telomeric DNA and supports telomere integrity</title>
+      <link>https://AFraderaSola.github.io/publication/2023_hannacollab/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://AFraderaSola.github.io/publication/2023_hannacollab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scoring function development for RNA-Seq differential expression assessment</title>
+      <link>https://AFraderaSola.github.io/project/lolium/</link>
+      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://AFraderaSola.github.io/project/lolium/</guid>
+      <description>&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#rnaseq-degs-and-r-pacakges-for-data-analysis&#34;&gt;RNAseq, DEGs and R pacakges for data analysis&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#jury-vote-function-to-determine-degs&#34;&gt;Jury vote function to determine DEGs&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#case-of-study-drought-resistance-in-perennial-ryegrass&#34;&gt;Case of study: Drought resistance in perennial ryegrass&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#conclusion&#34;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
+
+&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;My M.Sc project aimed to develop a scoring function for detecting differentially expressed genes (DEGs) using RNA-Seq data. I was motivated by the abundance of existing packages and resources for DEG analysis and wanted to investigate the differences between the most popular methods, compare their results, and determine the optimal approach for identifying DEGs. To achieve this, I utilized a novel dataset focused on drought resistance in the ryegrass species &lt;em&gt;Lolium perenne&lt;/em&gt; to test the various DEG detection packages and optimize the methodology. Through this project, I was able to contribute to the important field of crop agriculture while improving the accuracy and efficiency of DEG analysis.&lt;/p&gt;
+&lt;h3 id=&#34;rnaseq-degs-and-r-pacakges-for-data-analysis&#34;&gt;RNAseq, DEGs and R pacakges for data analysis&lt;/h3&gt;
+&lt;p&gt;RNA sequencing (RNAseq) is a popular method for measuring gene expression levels in cells or tissues, and RNAseq data analysis involves various steps, including quality control, alignment, quantification of gene expression, differential gene expression analysis, and functional enrichment analysis. Differential gene expression analysis identifies differentially expressed genes (DEGs), which are genes that show significant changes in expression levels between two or more conditions. DEG analysis can provide valuable insights into gene regulation, discover novel transcripts, and identify potential biomarkers for disease diagnosis and treatment. DEG analysis involves several steps, including read alignment, quality control, normalization, and statistical testing, and there are several software tools and packages available for each step.&lt;/p&gt;
+&lt;p&gt;For this project, the focus was on the normalization and statistical testing stages of DEG analysis, with read alignment and quality control being performed ubiquitously throughout the analysis. The selection of the appropriate tool depends on various factors, such as study design, sample size, distribution of expression data, and desired level of sensitivity and specificity.Three widely used packages, edgeR, DESeq2, and limma+voom, were selected along with a less conventional package, baySeq, for comparison:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://academic.oup.com/bioinformatics/article/26/1/139/182458?login=true&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;edgeR&lt;/strong&gt;&lt;/a&gt;: edgeR (Empirical analysis of Digital Gene Expression in R) is a software package used for the identification of differentially expressed genes in RNAseq datasets. It uses a negative binomial model and empirical Bayes estimation to estimate the dispersion parameters and gene-wise dispersion estimates. This package can be used for single-factor or multi-factor experimental designs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;DESeq2&lt;/strong&gt;&lt;/a&gt;: DESeq2 is a R package that can be used to analyze differential gene expression in RNAseq experiments. It uses the negative binomial distribution to model count data and provides methods for estimating size factors and dispersion parameters. DESeq2 also provides methods for normalizing data, performing hypothesis testing, and visualizing results.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://f1000research.com/articles/5-1408/v3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;limma+voom&lt;/strong&gt;&lt;/a&gt;: limma (Linear Models for Microarray Data) is an R package that can be used to analyze differential gene expression in RNAseq datasets. It uses linear models to analyze differential expression and provides a range of functions for data normalization and visualization. The voom (Variance modeling at the Observed Mean) function in limma can be used to transform count data into log2-counts per million (logCPM) values, which can then be used with limma for differential expression analysis.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-11-422&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;baySeq&lt;/strong&gt;&lt;/a&gt;: baySeq is a software package for analyzing RNAseq data using Bayesian methods. It can be used to identify differentially expressed genes, quantify expression levels, and estimate the probability of differential expression. baySeq models count data using a negative binomial distribution and provides a flexible framework for incorporating prior information about gene expression.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;jury-vote-function-to-determine-degs&#34;&gt;Jury vote function to determine DEGs&lt;/h3&gt;
+&lt;p&gt;I decided to design a jury vote function that could incorporate the results from the four previously described DEGs packages (edgeR, DESeq2, limma+voom, and baySeq) with the following criteria:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;For each gene, I calculated the p-value of differential expression for each package, using the recommended or default settings for each one.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;I applied a multiple testing correction to the p-values, such as the Benjamini-Hochberg or Bonferroni correction, to control for false positive results.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;I identified the genes that have a significant p-value after multiple testing correction, using a chosen significance threshold (e.g., FDR &amp;lt; 0.05).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;I ranked the genes based on the significance of their p-value for each gene/package, from most significant to least significant.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;I assigned a weight to each gene based on its rank, such that DEG is assigned with a value of 1 or 0 otherwise.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;I calculated a weighted average score for each gene, using the assigned weights. This would result in a single, combined score for each gene.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;I used the score to determine the strength of DEGs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This way, this jury vote function takes into account the results from multiple packages and weight them based on their relative performance, being a more robust and reliable identification of differentially expressed genes.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-jury-vote-score-genes-are-classified-as-not-degs-score--0-or-degs-score--1-4-robustness-of-the-deg-can-be-assessed-looking-at-the-score-1-least-robust-4-most-robust&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Jury vote score. Genes are classified as not DEGs (score = 0) or DEGs (score = 1-4). Robustness of the DEG can be assessed looking at the score (1 least robust, 4 most robust)&#34; srcset=&#34;
+               /project/lolium/featured_hu5ac57e246bf4a08b7e10d7ac1a775b28_21751_0e1d61013f318e5dddc1212b76e6af9b.webp 400w,
+               /project/lolium/featured_hu5ac57e246bf4a08b7e10d7ac1a775b28_21751_60847caafbf22af21209c2f7fa00844d.webp 760w,
+               /project/lolium/featured_hu5ac57e246bf4a08b7e10d7ac1a775b28_21751_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://AFraderaSola.github.io/project/lolium/featured_hu5ac57e246bf4a08b7e10d7ac1a775b28_21751_0e1d61013f318e5dddc1212b76e6af9b.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;353&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Jury vote score. Genes are classified as not DEGs (score = 0) or DEGs (score = 1-4). Robustness of the DEG can be assessed looking at the score (1 least robust, 4 most robust)
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;It also gives the flexibility to decide whether you want to maximize your results (taking any DEGs in any package, score of 1) or get a subset of very reliable, robust results (taking only DEGs in all packages, score of 4).&lt;/p&gt;
+&lt;h3 id=&#34;case-of-study-drought-resistance-in-perennial-ryegrass&#34;&gt;Case of study: Drought resistance in perennial ryegrass&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Lolium perenne&lt;/em&gt;, commonly known as perennial ryegrass, is a cool-season grass widely used in temperate regions for forage production, turfgrass, and erosion control due to its rapid establishment, high productivity, and quality. In addition, &lt;em&gt;L. perenne&lt;/em&gt; has gained interest as a model species for studying abiotic stress tolerance, particularly drought resistance.&lt;/p&gt;
+&lt;p&gt;Drought is a major environmental stress that affects plant growth and productivity, and its impact is expected to increase with climate change. Therefore, understanding the molecular mechanisms underlying drought resistance is crucial for developing more resilient crops. &lt;em&gt;L. perenne&lt;/em&gt; has several advantages for studying drought resistance, such as its ability to survive and recover from drought, its relatively small genome size, and the availability of genetic resources and tools.&lt;/p&gt;
+&lt;p&gt;Overall, &lt;em&gt;L. perenne&lt;/em&gt; is a valuable species for studying drought resistance and developing more resilient crops. Its use as a model species for abiotic stress research has the potential to improve our understanding of the molecular basis of stress tolerance and aid in the development of new crops with improved resilience.&lt;/p&gt;
+&lt;p&gt;RNAseq was collected from &lt;em&gt;L. perenne&lt;/em&gt; root and leaf tissue at different soil water content; 35%, considered a regular condition (no stress) and 15%, 5%, and 1%, increasing stress conditions.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-experimental-conditions-to-determine-l-perenne-degs-under-drought-conditions&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Experimental conditions to determine L. perenne DEGs under drought conditions&#34; srcset=&#34;
+               /project/lolium/Picture1_hu2c53f1038efb895537526eccb7ebc2ab_183807_bad0541e2bf3d7f2b50623ac799eb77b.webp 400w,
+               /project/lolium/Picture1_hu2c53f1038efb895537526eccb7ebc2ab_183807_9b91d7c309d941e78d0ba49150ee088f.webp 760w,
+               /project/lolium/Picture1_hu2c53f1038efb895537526eccb7ebc2ab_183807_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://AFraderaSola.github.io/project/lolium/Picture1_hu2c53f1038efb895537526eccb7ebc2ab_183807_bad0541e2bf3d7f2b50623ac799eb77b.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;652&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Experimental conditions to determine L. perenne DEGs under drought conditions
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;Then, I used the previously described jury vote sytem to determine the DEGs.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-number-of-degs-per-rnaseq-package&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Number of DEGs per RNAseq package&#34; srcset=&#34;
+               /project/lolium/Picture2_hub874c0c00bb5cdfc7bc0cf4e8fb343d1_323155_d4a8a0694c00a6bbbfb56d83799d93c8.webp 400w,
+               /project/lolium/Picture2_hub874c0c00bb5cdfc7bc0cf4e8fb343d1_323155_6f02b6b908491fb34817dd1534ff383a.webp 760w,
+               /project/lolium/Picture2_hub874c0c00bb5cdfc7bc0cf4e8fb343d1_323155_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://AFraderaSola.github.io/project/lolium/Picture2_hub874c0c00bb5cdfc7bc0cf4e8fb343d1_323155_d4a8a0694c00a6bbbfb56d83799d93c8.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;557&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Number of DEGs per RNAseq package
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;The results of the analysis showed that edgeR, DESeq2, and limma+voom had a similar performance in terms of identifying differentially expressed genes (DEGs), as evidenced by the low number of DEGs unique to each package. However, BaySeq yielded a higher number of DEGs using its own methodology.&lt;/p&gt;
+&lt;p&gt;In addition to comparing the packages, we also conducted a functional analysis to investigate whether the genes associated with drought conditions were functionally related. The results of the functional analysis provided valuable insights into the mechanisms by which &lt;em&gt;L. perenne&lt;/em&gt; adapts to drought conditions.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-number-of-degs-per-rnaseq-package&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Number of DEGs per RNAseq package&#34; srcset=&#34;
+               /project/lolium/Picture3_huc57a54767c1656f2717898bbed19fdb3_238664_8dd343ece79ffafabd16312271477a53.webp 400w,
+               /project/lolium/Picture3_huc57a54767c1656f2717898bbed19fdb3_238664_a0d95217bd431db64d8c0725fee23109.webp 760w,
+               /project/lolium/Picture3_huc57a54767c1656f2717898bbed19fdb3_238664_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://AFraderaSola.github.io/project/lolium/Picture3_huc57a54767c1656f2717898bbed19fdb3_238664_8dd343ece79ffafabd16312271477a53.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;442&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Number of DEGs per RNAseq package
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;RNAseq is a powerful tool to measure gene expression levels and identify DEGs between different biological conditions, such as different tissues, cell types, developmental stages, or disease states. The RNAseq data analysis pipeline includes several steps, such as quality control, alignment, gene expression quantification, normalization, and statistical testing for differential expression analysis. Several packages and tools are available for each step, and the choice of appropriate methods is crucial for obtaining reliable and biologically meaningful results.&lt;/p&gt;
+&lt;p&gt;In this study, we compared the performance of four popular DEGs analysis packages (edgeR, DESeq2, limma+voom, and BaySeq) for the identification of drought-responsive genes in the ryegrass Lolium perenne. We found that the three most widely used packages (edgeR, DESeq2, and limma+voom) performed similarly, while BaySeq identified a larger number of DEGs using its own methodology. We also conducted functional enrichment analysis to gain insights into the biological processes and pathways involved in the drought response in &lt;em&gt;L. perenne&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Overall, our study demonstrates the importance of carefully selecting appropriate methods and packages for RNAseq data analysis and highlights the potential of RNAseq technology for identifying novel genes and biomarkers related to complex biological processes such as drought adaptation.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A novel SNF2 ATPase complex in Trypanosoma brucei with a role in H2A.Z-mediated chromatin remodeling</title>
+      <link>https://AFraderaSola.github.io/publication/2022_chiptryp/</link>
+      <pubDate>Wed, 08 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://AFraderaSola.github.io/publication/2022_chiptryp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The double-stranded DNA-binding proteins TEBP-1 and TEBP-2 form a telomeric complex with POT-1</title>
+      <link>https://AFraderaSola.github.io/publication/2021_rnaseqcele/</link>
+      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://AFraderaSola.github.io/publication/2021_rnaseqcele/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A comparison of shared patterns of differential gene expression and gene ontologies in response to water-stress in roots and leaves of four diverse genotypes of Lolium and Festuca spp. temperate pasture grasses</title>
+      <link>https://AFraderaSola.github.io/publication/2021_lolium/</link>
+      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://AFraderaSola.github.io/publication/2021_lolium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Differential gene expression and gene ontologies associated with increasing water-stress in leaf and root transcriptomes of perennial ryegrass (Lolium perenne)</title>
+      <link>https://AFraderaSola.github.io/publication/2019_lolium/</link>
+      <pubDate>Tue, 30 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://AFraderaSola.github.io/publication/2019_lolium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>M.Sc thesis talk at IPP Interviews</title>
+      <link>https://AFraderaSola.github.io/slides/ipplolium/</link>
+      <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://AFraderaSola.github.io/slides/ipplolium/</guid>
+      <description>&lt;h3 id=&#34;msc-thesis-talk&#34;&gt;M.Sc thesis talk&lt;/h3&gt;
+&lt;p&gt;at IPP Interviews&lt;/p&gt;
+&lt;p&gt;The data in this slides has been published under the following DOIs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;10.1371/journal.pone.0249636&lt;/li&gt;
+&lt;li&gt;10.1371/journal.pone.0220518&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;./slides/IPPlolium_1.jpeg&#34;
+  &gt;
+
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;./slides/IPPlolium_2.jpeg&#34;
+  &gt;
+
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;./slides/IPPlolium_3.jpeg&#34;
+  &gt;
+
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;./slides/IPPlolium_4.jpeg&#34;
+  &gt;
+
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;./slides/IPPlolium_5.jpeg&#34;
+  &gt;
+
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;./slides/IPPlolium_6.jpeg&#34;
+  &gt;
+
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;./slides/IPPlolium_7.jpeg&#34;
+  &gt;
+
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;./slides/IPPlolium_8.jpeg&#34;
+  &gt;
+
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;./slides/IPPlolium_9.jpeg&#34;
+  &gt;
+
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;./slides/IPPlolium_10.jpeg&#34;
+  &gt;
+
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;./slides/IPPlolium_11.jpeg&#34;
+  &gt;
+
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;./slides/IPPlolium_12.jpeg&#34;
+  &gt;
+
+&lt;hr&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
