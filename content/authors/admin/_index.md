@@ -17,6 +17,7 @@ interests:
 - Bioinformatics
 - Data visualization
 - Proteomics
+- Genomics
 - Next generation sequencing
 - Network & Systems biology
 organizations:
