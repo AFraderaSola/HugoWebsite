@@ -27,13 +27,13 @@ content:
   # Contact details (edit or remove options as required)
   email: afraderasola@gmail.com
   phone: +49 179 3469988
-  address:
-    street: Ackermannweg 4
-    city: Mainz
-    country: Germany
-    region:
-    postcode: '55128'
-    # country_code: US
+  # address:
+  #   street: Ackermannweg 4
+  #   city: Mainz
+  #   country: Germany
+  #   region:
+  #   postcode: '55128'
+  #   # country_code: US
   # coordinates:
   #   latitude: '37.4275'
   #   longitude: '-122.1697'
@@ -42,11 +42,11 @@ content:
   #   - 'Monday 10:00 to 13:00'
   #   - 'Wednesday 09:00 to 10:00'
   # appointment_url: 'https://calendly.com'
-  contact_links:
-    - icon: twitter
-      icon_pack: fab
-      name: DM Me
-      link: 'https://twitter.com/AFraderaSola'
+  # contact_links:
+  #   - icon: twitter
+  #     icon_pack: fab
+  #     name: DM Me
+  #     link: 'https://twitter.com/AFraderaSola'
     # - icon: video
     #   icon_pack: fas
     #   name: Zoom Me

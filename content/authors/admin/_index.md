@@ -2,7 +2,7 @@
 bio:
 education:
   courses:
-  - course: PhD Candidate in Quantitative Proteomics
+  - course: PhD in Bioinformatics & Molecular Biology
     institution: JGU University
     year: 2024
   - course: M.Sc. in Omics Data Analysis

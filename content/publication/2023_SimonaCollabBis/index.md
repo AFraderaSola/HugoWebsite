@@ -29,7 +29,7 @@ publication_types:
 publishDate: "2023-07-17T00:00:00Z"
 # slides: example
 tags: Proteomics
-title: RNA-dependent interactome allows network-based assignment of RNA-binding protein function 
+title: Characterization of two novel proteins involved in mitochondrial DNA anchoring in Trypanosoma brucei
 url_code: ""
 url_dataset: ""
 url_pdf: ""

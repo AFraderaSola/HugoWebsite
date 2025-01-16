@@ -33,7 +33,7 @@ publishDate: "2021-05-11T00:00:00Z"
 # slides: example
 summary: RNA-Seq data was analyzed to characterize two novel telomere binding proteins (TEBP-1 and TEBP-2). Differential gene expression was investigated on KO worms (against a control strain).
 tags: Genomics
-title: A novel SNF2 ATPase complex in Trypanosoma brucei with a role in H2A.Z-mediated chromatin remodelling
+title: The double-stranded DNA-binding proteins TEBP-1 and TEBP-2 form a telomeric complex with POT-1
 url_code: ""
 url_dataset: ""
 url_pdf: ""
