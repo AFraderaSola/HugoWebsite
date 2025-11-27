@@ -26,7 +26,7 @@ content:
 
   # Contact details (edit or remove options as required)
   email: afraderasola@gmail.com
-  phone: +49 179 3469988
+  # phone: +49 179 3469988
   # address:
   #   street: Ackermannweg 4
   #   city: Mainz

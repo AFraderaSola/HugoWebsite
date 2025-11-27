@@ -3,7 +3,7 @@
   "baseUrl": ".",
   "paths": {
    "*": [
-    "..\\themes\\albert-custom\\wowchemy\\wowchemy-hugo-modules\\wowchemy\\v5\\assets\\*"
+    "../themes/albert-custom/wowchemy/wowchemy-hugo-modules/wowchemy/v5/assets/*"
    ]
   }
  }
